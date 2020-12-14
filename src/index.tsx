@@ -6,10 +6,20 @@ import { store } from './app/store'
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker'
 
+// Routerで設定
+import { Route, BrowserRouter } from 'react-router-dom'
+
+import Login from 'features/login/Login'
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      {/* ↓Router設定 */}
+      <BrowserRouter>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/tasks" component={App} />
+      </BrowserRouter>
+      {/* ↑Router設定 */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
