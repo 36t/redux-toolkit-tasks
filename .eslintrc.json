@@ -21,6 +21,9 @@
         "@typescript-eslint"
     ],
     "settings": {
+        "react": {
+            "version": "detect"
+        },
         "import/resolver": {
             "node": {
                 "extensions": [
